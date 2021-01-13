@@ -29,7 +29,9 @@ def printminus(result):
     print(f'Вы безуспешно пытались снять {result}. На счете недостаточно средств.')
 
 
-pin = int(input("Здравствуйте!\nВведите ПИН:"))
-amount = int(input("Введите сумму:"))
-
-cashmachine(pin, amount)
+try:
+    pin = int(input("Здравствуйте!\nВведите ПИН:"))
+    amount = int(input("Введите сумму:"))
+    cashmachine(pin, amount)
+except ValueError:
+    print("Заберите свою карту и в следующий раз вводите только цифры!")
